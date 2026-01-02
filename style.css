@@ -1141,11 +1141,10 @@ body {
         padding-right: 15px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        font-family: 'Impact', Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
+       align-items: flex-end;
+       font-family: 'Anton', sans-serif;
+       font-weight: 550;
+       text-transform: uppercase;
     }
 }
 
@@ -1223,3 +1222,4 @@ body {
 
     
 }
+
