@@ -1207,4 +1207,10 @@ body {
     .contact-icons {
         grid-template-columns: repeat(6, 1fr);
     }
+
 }
+
+@media (min-width: 645px) {
+    .work-categories {
+        flex: 0 0 170px;
+    }
