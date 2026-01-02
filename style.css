@@ -1015,9 +1015,6 @@ body {
 }
 
 @media (max-width: 645px) {
-    .left-menu {
-        display: none;
-    }
     
     .section {
         left: 0;
@@ -1038,12 +1035,9 @@ body {
     .hero-subtitle {
         font-size: 1rem;
         padding-right: 10px;
+        margin-bottom: -10px;
     }
     
-    .hero-name {
-        font-size: clamp(3rem, 12vw, 5rem);
-        padding-right: 10px;
-    }
     
     .work-container {
         flex-direction: column;
@@ -1140,6 +1134,18 @@ body {
     
     .icon-link span {
         font-size: 12px;
+    }
+    
+    .hero-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: 'Impact', Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
     }
 }
 
