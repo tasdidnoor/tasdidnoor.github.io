@@ -1012,17 +1012,6 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
-    .hero-name {
-        font-size: clamp(3rem, 12vw, 5rem);
-        padding-right: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-family: 'Anton', Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-    }
 }
 
 @media (max-width: 645px) {
@@ -1046,9 +1035,13 @@ body {
     .hero-subtitle {
         font-size: 1rem;
         padding-right: 10px;
-        margin-bottom: -10px;
+        margin-bottom: -5px;
     }
     
+    .hero-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+        padding-right: 10px;
+    }
     
     .work-container {
         flex-direction: column;
@@ -1146,18 +1139,6 @@ body {
     .icon-link span {
         font-size: 12px;
     }
-    
-    .hero-name {
-        font-size: clamp(3rem, 12vw, 5rem);
-        padding-right: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-family: 'Anton', Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1189,17 +1170,6 @@ body {
     
     .img-xlarge {
         max-height: 500px;
-    }
-    .hero-name {
-        font-size: clamp(3rem, 12vw, 5rem);
-        padding-right: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-family: 'Anton', Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
     }
 }
 
@@ -1235,34 +1205,12 @@ body {
     .contact-icons {
         grid-template-columns: repeat(6, 1fr);
     }
-    .hero-name {
-        font-size: clamp(3rem, 12vw, 5rem);
-        padding-right: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-family: 'Anton', Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-    }
 }
 
 /* Desktop and larger screens */
 @media (min-width: 645px) {
     .work-categories {
-        flex: 0 0 170px;
-    }
-    .hero-name {
-        font-size: clamp(3rem, 12vw, 5rem);
-        padding-right: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-family: 'Anton', Arial, sans-serif;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
+        flex: 0 0 165px;
     }
 
     
