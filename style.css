@@ -1012,6 +1012,17 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
+    .hero-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: 'Anton', Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
 }
 
 @media (max-width: 645px) {
@@ -1179,6 +1190,17 @@ body {
     .img-xlarge {
         max-height: 500px;
     }
+    .hero-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: 'Anton', Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
 }
 
 /* Landscape mobile */
@@ -1213,12 +1235,34 @@ body {
     .contact-icons {
         grid-template-columns: repeat(6, 1fr);
     }
+    .hero-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: 'Anton', Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
 }
 
 /* Desktop and larger screens */
 @media (min-width: 645px) {
     .work-categories {
         flex: 0 0 170px;
+    }
+    .hero-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: 'Anton', Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
     }
 
     
