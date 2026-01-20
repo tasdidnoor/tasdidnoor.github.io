@@ -1,6 +1,3 @@
-/* ==============================
-   RESET & BASE STYLES
-   ============================== */
 * {
     margin: 0;
     padding: 0;
@@ -37,9 +34,8 @@ body {
     line-height: 1.6;
 }
 
-/* ==============================
-   LOADING SCREEN
-   ============================== */
+/*loading screen*/
+
 #loading-screen {
     position: fixed;
     top: 0;
@@ -77,9 +73,8 @@ body {
     pointer-events: none;
 }
 
-/* ==============================
-   LEFT MENU
-   ============================== */
+/*Left menu*/
+
 .left-menu {
     position: fixed;
     left: 0;
@@ -132,9 +127,8 @@ body {
     width: 100%;
 }
 
-/* ==============================
-   SECTIONS
-   ============================== */
+/*Sections */
+
 .section {
     position: absolute;
     top: 0;
@@ -154,7 +148,8 @@ body {
     pointer-events: all;
 }
 
-/* Hide scrollbars but keep scrolling */
+/*Hide ScrollBars, but keep scrolling*/
+
 .section::-webkit-scrollbar,
 .work-display::-webkit-scrollbar {
     width: 0px;
@@ -167,9 +162,8 @@ body {
     -ms-overflow-style: none;
 }
 
-/* ==============================
-   HOME SECTION
-   ============================== */
+/*home section*/
+
 .home-section {
     display: flex;
     flex-direction: column;
@@ -224,9 +218,8 @@ body {
     padding-right: 0;
 }
 
-/* ==============================
-   WORK SECTION
-   ============================== */
+/*Work Section*/
+
 .work-section {
     padding: 40px 40px 40px 10px;
 }
@@ -306,9 +299,7 @@ body {
     to { opacity: 1; }
 }
 
-/* ==============================
-   RESPONSIVE IMAGES & SIZE CLASSES
-   ============================== */
+/*Responsive Image */
 .responsive-img {
     display: block;
     max-width: 100%;
@@ -316,7 +307,7 @@ body {
     object-fit: contain;
 }
 
-/* Image size control classes */
+/*Image size control classes */
 .img-small {
     max-height: 200px;
     width: auto;
@@ -337,9 +328,7 @@ body {
     width: 100%;
 }
 
-/* ==============================
-   CONTENT BLOCK LAYOUT
-   ============================== */
+/*Content Block Layout */
 .content-block {
     display: flex;
     gap: 40px;
@@ -370,9 +359,7 @@ body {
     line-height: 1.7;
 }
 
-/* ==============================
-   ACTING CONTENT
-   ============================== */
+/*Acting Content*/
 .acting-title {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 20px;
@@ -403,9 +390,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ==============================
-   ARTS CONTENT - BIG IMAGES
-   ============================== */
+/*Arts Content */
 .arts-title {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 20px;
@@ -448,9 +433,7 @@ body {
     color: var(--gray);
 }
 
-/* ==============================
-   MUSIC CONTENT
-   ============================== */
+/*Music Content */
 .music-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     margin-bottom: 30px;
@@ -528,9 +511,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* ==============================
-   ENGINEERING CONTENT
-   ============================== */
+/*Engineering Content */
 .engineering-title {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 20px;
@@ -549,9 +530,7 @@ body {
     border: 1px solid var(--dark-gray);
 }
 
-/* ==============================
-   BLOG CONTENT
-   ============================== */
+/*Blog Content */
 .blog-title {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 20px;
@@ -579,9 +558,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* ==============================
-   STOCKS CONTENT
-   ============================== */
+/*Stocks Content */
 .stocks-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     margin-bottom: 30px;
@@ -648,9 +625,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* ==============================
-   POETRY CONTENT
-   ============================== */
+/*Poetry Content */
 .poetry-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     margin-bottom: 30px;
@@ -695,9 +670,7 @@ body {
     margin-bottom: -9px;
 }
 
-/* ==============================
-   POTTERY & PHOTOGRAPHY CONTENT
-   ============================== */
+/* Pottery and Photography Content */
 .pottery-title,
 .photography-title {
     font-size: clamp(2rem, 3vw, 3rem);
@@ -729,9 +702,7 @@ body {
     color: var(--gray);
 }
 
-/* ==============================
-   CERTIFICATIONS CONTENT
-   ============================== */
+/*Certifications Content */
 .certifications-title {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 20px;
@@ -773,9 +744,7 @@ body {
     font-size: 12px;
 }
 
-/* ==============================
-   ABOUT SECTION
-   ============================== */
+/*About Section */
 .about-section {
     padding: 60px 60px 60px 180px;
 }
@@ -900,9 +869,7 @@ body {
     margin-left: 8px;
 }
 
-/* ==============================
-   CONTACT SECTION
-   ============================== */
+/*Contact Section */
 .contact-section {
     padding: 60px;
     display: flex;
@@ -976,16 +943,12 @@ body {
     font-size: 1.1rem;
 }
 
-/* ==============================
-   UTILITY CLASSES
-   ============================== */
+/*Util Classes */
 .yellow {
     color: var(--yellow);
 }
 
-/* ==============================
-   RESPONSIVE DESIGN
-   ============================== */
+/*Phone Responsiveness */
 @media (max-width: 1024px) {
     .section {
         padding: 30px 30px 30px 50px;
@@ -1256,3 +1219,4 @@ body {
     padding-right: 0;
     }
 }
+
