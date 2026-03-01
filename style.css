@@ -742,21 +742,34 @@ body {
 }
 
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    display: block; /* Masonry works best with block/columns */
+    column-count: 3; /* 3 columns for desktop */
+    column-gap: 20px;
     margin-top: 30px;
+    width: 100%;
 }
 
 .grid-item {
+    display: inline-block; /* Prevents items from breaking across columns */
+    width: 100%;
+    margin-bottom: 20px;
     text-align: center;
+    break-inside: avoid;
 }
 
 .grid-img {
     width: 100%;
-    height: auto;
+    height: auto; /* Natural height, no cropping */
+    display: block;
     margin-bottom: 10px;
-    border: 1px solid var(--dark-gray);
+    border: none; /* Removed grey border */
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover .grid-img {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2); /* Added subtle red glow instead of border */
 }
 
 .pottery-caption,
@@ -1074,12 +1087,12 @@ body {
     .section {
         left: 0;
         width: 100%;
-        padding: 60px 40px 140px 40px; /* Further increased padding on mobile */
+        padding: 30px 40px 250px 40px; /* Reduced top to 30px, increased bottom to 250px */
     }
     
     .work-section,
     .about-section {
-        padding: 60px 40px 140px 40px;
+        padding: 30px 40px 250px 40px;
     }
     
     .hero-top {
@@ -1153,11 +1166,18 @@ body {
     
     .work-display {
         padding-right: 0;
+        height: auto; /* Allow content to push the container down */
+        overflow: visible;
+    }
+    
+    .display-content {
+        padding-bottom: 100px; /* Extra breathing room for each sub-page */
     }
     
     .content-block {
         flex-direction: column;
         gap: 20px;
+        margin-bottom: 60px; /* Consistent spacing between blocks */
     }
     
     .media-container,
@@ -1176,7 +1196,11 @@ body {
         gap: 20px;
     }
     
-    .image-grid,
+    .image-grid {
+        column-count: 2; /* 2 columns on mobile for readability */
+        column-gap: 15px;
+    }
+    
     .certs-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns for photos */
         gap: 15px;
