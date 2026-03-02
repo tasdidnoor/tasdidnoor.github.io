@@ -111,12 +111,12 @@ body {
     position: relative;
 }
 
-.left-menu a:hover,
-.left-menu a.active {
+.left-menu .menu-link:hover,
+.left-menu .menu-link.active {
     color: var(--red);
 }
 
-.left-menu a::after {
+.left-menu .menu-link::after {
     content: '';
     position: absolute;
     bottom: -5px;
