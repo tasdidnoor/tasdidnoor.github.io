@@ -1138,26 +1138,25 @@ body {
     }
     
     .hero-bottom {
-        padding: 20px;
-        bottom: 80px;
-        text-align: right; /* Changed from center */
+        padding: 0;
+        bottom: 60px;
+        text-align: right;
         width: 100%;
         right: 0;
     }
     
     .hero-subtitle {
-        font-size: clamp(1rem, 4vw, 1.5rem);
-        margin-right: 0;
-        text-align: right; /* Changed from center */
-        margin-bottom: 5px;
+        display: none;
     }
     
     .hero-name {
-        font-size: clamp(3rem, 15vw, 6rem);
-        padding-right: 0;
-        text-align: right; /* Changed from center */
-        line-height: 1;
-        font-family: 'Impact', 'Bebas Neue', sans-serif;
+        display: none;
+    }
+
+    .hero-image-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
     }
     
     .work-container {
