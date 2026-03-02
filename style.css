@@ -1189,14 +1189,14 @@ body {
         white-space: nowrap;
         padding: 8px 15px;
         border-left: none;
-        border-bottom: 2px solid transparent;
+        border-bottom: none;
         font-size: 12px;
+        position: relative;
     }
     
     .work-category:hover,
     .work-category.active-category {
         border-left: none;
-        border-bottom-color: var(--red);
     }
     
     .work-display {
