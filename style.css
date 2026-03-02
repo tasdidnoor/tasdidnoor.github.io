@@ -260,6 +260,10 @@ body {
     padding-right: 0;
 }
 
+.hero-image-mobile {
+    display: none;
+}
+
 /* ==============================
    WORK SECTION
    ============================== */
