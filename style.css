@@ -1275,18 +1275,6 @@ body {
     .icon-link span {
         font-size: 12px;
     }
-
-    .hero-name {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(4rem, 20vw, 12rem);
-    font-weight: 550;
-    line-height: 0.8;
-    letter-spacing: -0.1em;
-    word-spacing: -0.1em;
-    color: var(--red);
-    text-align: right;
-    padding-right: 0;
-    }
 }
 
 @media (max-width: 480px) {
