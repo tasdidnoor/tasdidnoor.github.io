@@ -705,34 +705,66 @@ body {
 }
 
 .poems-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.poem-box {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-gray);
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    height: 100%;
 }
 
-.poem-card {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--dark-gray);
+.poem-box:hover {
+    transform: translateY(-5px);
+    background: var(--black);
+    box-shadow: none;
 }
 
-.poem-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+.poem-box .poem-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--white);
-    font-family: 'Anton', sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
-.poem-text {
-    font-style: italic;
-    line-height: 1.8;
-    color: var(--gray);
-    font-size: 1.2rem;
+.poem-box .poem-date {
+    font-size: 0.8rem;
+    color: var(--red);
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.poem-box .poem-author {
+    font-size: 0.9rem;
+    color: var(--yellow);
     margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
 }
 
-.poem-text p {
-    margin-bottom: -9px;
+.poem-box .poem-snippet {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: var(--gray);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: auto;
 }
 
 /* ==============================
