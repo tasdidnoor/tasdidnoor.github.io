@@ -127,8 +127,8 @@ body {
     transition: width 0.3s ease;
 }
 
-.left-menu a:hover::after,
-.left-menu a.active::after {
+.left-menu .menu-link:hover::after,
+.left-menu .menu-link.active::after {
     width: 100%;
 }
 
