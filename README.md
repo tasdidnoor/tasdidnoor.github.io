@@ -9,6 +9,4 @@ A multidisciplinary personal portfolio showcasing acting, engineering, arts, and
 - `Media/`: Folder containing all visual and textual assets.
 
 ## License
-
 This project is licensed under the CC-BY-NC-ND License - see the [LICENSE](LICENSE) file for details.
----
