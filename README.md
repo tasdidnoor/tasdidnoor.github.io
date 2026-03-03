@@ -8,11 +8,7 @@ A multidisciplinary personal portfolio showcasing acting, engineering, arts, and
 - `script.js`: Dynamic interactions and navigation logic.
 - `Media/`: Folder containing all visual and textual assets.
 
-## Latest Updates
-- Mobile-first optimization with a bottom navigation bar.
-- Cinematic "Bebas Neue" typography for headers.
-- Enhanced "About" section with detailed journey timeline.
-- Robust video control logic for category switching.
+## License
 
+This project is licensed under the CC-BY-NC-ND License - see the [LICENSE](LICENSE) file for details.
 ---
-*Created by Gemini CLI*
