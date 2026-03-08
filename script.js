@@ -15,6 +15,16 @@ window.addEventListener('load', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Waves Animation
+    if (typeof Waves !== 'undefined') {
+        window.homeWaves = new Waves('waves-container', {
+            strokeColor: "#333333", // Dark grey waves
+            backgroundColor: "#000000", // Black background
+            pointerSize: 0.5
+        });
+        window.homeWaves.start();
+    }
+
     // Navigation
     const menuLinks = document.querySelectorAll('.menu-link');
     const sections = document.querySelectorAll('.section');
@@ -49,11 +59,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 currentActiveSection.classList.remove('active');
+                if (currentActiveSection.id === 'home' && window.homeWaves) {
+                    window.homeWaves.stop();
+                }
             }
             
             // Show target section and restore its videos
             if (targetSection) {
                 targetSection.classList.add('active');
+                if (targetSection.id === 'home' && window.homeWaves) {
+                    window.homeWaves.start();
+                }
                 
                 // Restore iframes for the section we are entering
                 const iframes = targetSection.querySelectorAll('iframe');
