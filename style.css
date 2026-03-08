@@ -150,6 +150,13 @@ body {
     align-items: center;
 }
 
+.mobile-nav.nav-top {
+    top: 0;
+    bottom: auto;
+    border-top: none;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+}
+
 .mobile-nav a {
     color: var(--white);
     text-decoration: none;
