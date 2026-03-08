@@ -28,7 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation
     const menuLinks = document.querySelectorAll('.menu-link');
     const sections = document.querySelectorAll('.section');
+    const mobileNav = document.querySelector('.mobile-nav');
     
+    // Set initial state for mobile nav
+    if (mobileNav) {
+        mobileNav.classList.add('nav-top');
+    }
+
     menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
