@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (currentActiveSection === targetSection) return;
             
+            // Toggle mobile nav position
+            if (mobileNav) {
+                if (targetId === '#home') {
+                    mobileNav.classList.add('nav-top');
+                } else {
+                    mobileNav.classList.remove('nav-top');
+                }
+            }
+            
             menuLinks.forEach(l => {
                 if (l.getAttribute('href') === targetId) {
                     l.classList.add('active');
