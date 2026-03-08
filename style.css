@@ -1146,7 +1146,7 @@ body {
     
     .hero-bottom {
         padding: 0;
-        bottom: 60px;
+        bottom: 20px; /* Pushed further down with small spacing */
         text-align: right;
         width: 100%;
         right: 0;
