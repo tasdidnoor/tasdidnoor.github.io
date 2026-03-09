@@ -154,7 +154,7 @@ body {
     top: 0;
     bottom: auto;
     border-top: none;
-    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+    border-bottom: 1px solid transparent; /* Removed red border */
 }
 
 .mobile-nav a {
