@@ -1138,8 +1138,11 @@ body {
         width: 100%;
         padding: 30px 40px 250px 40px; /* Reduced top to 30px, increased bottom to 250px */
     }
-    
-    .work-section,
+
+    .work-section {
+        padding: 80px 40px 250px 40px; /* Increased top padding for fixed menu */
+    }
+
     .about-section {
         padding: 30px 40px 250px 40px;
     }
@@ -1181,15 +1184,20 @@ body {
         flex: 0 0 auto;
         width: 100%;
         overflow-x: auto;
-        margin-bottom: 30px;
+        margin-bottom: 0;
         padding: 10px 0;
-        position: -webkit-sticky;
-        position: sticky;
-        top: -30px; /* Offset for section padding */
-        background: var(--black);
-        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1500;
         -webkit-overflow-scrolling: touch;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+        height: auto;
+        align-items: normal;
+        left: 0;
     }
     
     .work-categories ul {
@@ -1214,8 +1222,9 @@ body {
     
     .work-display {
         padding-right: 0;
-        height: auto; /* Allow content to push the container down */
+        height: auto;
         overflow: visible;
+        margin-left: 0;
     }
     
     .display-content {
