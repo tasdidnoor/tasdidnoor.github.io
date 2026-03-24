@@ -1136,15 +1136,15 @@ body {
     .section {
         left: 0;
         width: 100%;
-        padding: 30px 40px 250px 40px; /* Reduced top to 30px, increased bottom to 250px */
+        padding: 80px 40px 250px 40px; /* Increased top to 80px, increased bottom to 250px */
     }
 
     .work-section {
-        padding: 80px 40px 250px 40px; /* Increased top padding for fixed menu */
+        padding: 160px 40px 250px 40px; /* Further increased top padding for fixed menus */
     }
 
     .about-section {
-        padding: 30px 40px 250px 40px;
+        padding: 80px 40px 250px 40px;
     }
     
     .hero-top {
@@ -1228,6 +1228,7 @@ body {
     }
     
     .display-content {
+        padding-top: 60px; /* Space from the fixed sub-categories menu */
         padding-bottom: 100px; /* Extra breathing room for each sub-page */
     }
     
