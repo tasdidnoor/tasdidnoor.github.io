@@ -184,6 +184,7 @@ body {
     left: 120px;
     width: calc(100% - 120px);
     min-height: 100vh;
+    min-height: 100dvh;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -221,6 +222,8 @@ body {
     padding: 40px;
     overflow: hidden;
     max-height: 100vh;
+    max-height: 100dvh;
+    height: 100dvh;
 }
 
 .hero-top {
@@ -238,7 +241,7 @@ body {
 
 .hero-bottom {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 0;
     width: auto;
     padding: 20px;
@@ -585,24 +588,104 @@ body {
 }
 
 /* ==============================
-   ENGINEERING CONTENT
+   PROJECTS CONTENT
    ============================== */
-.engineering-title {
+.projects-title {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 20px;
     color: var(--white);
 }
 
-.engineering-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.engineering-img {
-    width: 100%;
-    height: auto;
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--dark-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.project-card:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.project-card:hover .project-card-image img {
+    opacity: 1;
+}
+
+.project-card-image::after {
+    content: 'VIEW REPO';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: var(--red);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-card-image::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.project-card-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--white);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.project-card-info p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-family: sans-serif; /* Cleaner for long text */
 }
 
 /* ==============================
@@ -1067,6 +1150,57 @@ body {
 .icon-link span {
     font-size: 14px;
     letter-spacing: 1px;
+}
+
+.resume-container {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: transparent;
+    color: var(--white);
+    padding: 8px 16px;
+    border: 1px solid var(--red);
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.resume-button i {
+    font-size: 0.9rem;
+}
+
+.resume-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--red);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.resume-button:hover {
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.resume-button:hover::before {
+    width: 100%;
 }
 
 .contact-email {

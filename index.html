@@ -114,7 +114,7 @@
                     <li data-category="acting" class="work-category acting-cat active-category">Acting</li>
                     <li data-category="arts" class="work-category arts-cat">Arts</li>
                     <!-- <li data-category="music" class="work-category music-cat">Music</li> -->
-                    <li data-category="engineering" class="work-category engineering-cat">Engineering</li>
+                    <li data-category="projects" class="work-category projects-cat">Projects</li>
                     <!-- <li data-category="blog" class="work-category blog-cat">Blog</li>
                     <li data-category="stocks" class="work-category stocks-cat">Stocks</li>
                     <li data-category="poetry" class="work-category poetry-cat">Poetry</li> -->
@@ -297,28 +297,87 @@
                 </div> 
                 -->
 
-                <!-- Engineering Content -->
-                <div class="display-content engineering-content" id="engineering-content">
-                    <h2 class="engineering-title">Engineering</h2>
+                <!-- Projects Content -->
+                <div class="display-content projects-content" id="projects-content">
+                    <h2 class="projects-title">Projects</h2>
                     
-                    <div class="content-block">
-                        <div class="media-container">
-                            <div class="engineering-images">
-                                <img src="Media/Engineering/Engineering1.png" alt="Engineering 1" class="responsive-img engineering-img img-medium">
-                                <img src="Media/Engineering/Engineering2.png" alt="Engineering 2" class="responsive-img engineering-img img-medium">
-                                <img src="Media/Engineering/Engineering3.png" alt="Engineering 3" class="responsive-img engineering-img img-medium">
-                            </div>
+                    <div class="projects-grid">
+                        <!-- LockBox -->
+                        <div class="project-card">
+                            <a href="https://github.com/tasdidnoor/LockBox" target="_blank" class="project-card-link">
+                                <div class="project-card-image">
+                                    <img src="../Assets/LockBox/MainView.jpg" alt="LockBox: A Study Toolkit">
+                                </div>
+                                <div class="project-card-info">
+                                    <h3>LockBox: A Study Toolkit</h3>
+                                    <p>A hardware-integrated focus tool designed to help students stay off their phones. Features a physically locking box and an Apple-inspired web dashboard for real-time tracking.</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="text-container">
-                            <h3>Arduino Auto-Plant Watering System</h3>
-                            <p><strong>Language:</strong> MATLAB</p>
-                            <p><strong>Year:</strong> 2025</p>
-                            <p>This project explores the development of an automated plant-watering system using MATLAB and the Grove Beginner Kit for Arduino to demonstrate reactive control through a state-machine-based design.</p>
-                            <p>The primary objectives were to monitor soil moisture for a period of time and control a water pump in fixed bursts based on sensor feedback, integrate an additional sensor beyond the required components, and implement a manual emergency stop.</p>
-                            <p>The system was structured as a finite-state machine with dry-soil watering, and wet-soil idling, while incorporating an eCO₂ sensor as the additional hardware component to modify watering duration under elevated indoor air-quality conditions.</p>
-                            <p>MATLAB was used to read analog moisture values, convert them into dryness percentages, graph the values live, and run the pump through a MOSFET board in five-second bursts with mandatory pauses. A button on the Grove board functioned as an emergency stop, ensuring safety.</p>
-                            <p>The system reliably detected transitions between dry and wet soil, activated the pump only during appropriate states, and produced clear real-time graphical output corresponding to moisture changes. Incorporating the eCO₂ sensor successfully altered watering duration under simulated high-CO₂ conditions, and the emergency stop halted operation immediately.</p>
-                            <p>The project successfully demonstrated a robust state-machine implementation for autonomous plant maintenance using MATLAB, sensors, and embedded hardware. Future improvements could include data logging, wireless communication, or a more sophisticated moisture-prediction model to further enhance autonomy and system intelligence.</p>
+
+                        <!-- Plant Watering -->
+                        <div class="project-card">
+                            <a href="https://github.com/tasdidnoor/Automatic-Plant-Watering-System" target="_blank" class="project-card-link">
+                                <div class="project-card-image">
+                                    <img src="../Assets/Plant Watering/README.png" alt="Automatic Plant Watering System">
+                                </div>
+                                <div class="project-card-info">
+                                    <h3>Automatic Plant Watering System</h3>
+                                    <p>An autonomous, sensor-driven irrigation system built with MATLAB and Arduino. Features reactive control based on soil moisture and adaptive watering durations.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- m1014 -->
+                        <div class="project-card">
+                            <a href="https://github.com/tasdidnoor/m1014" target="_blank" class="project-card-link">
+                                <div class="project-card-image">
+                                    <img src="../Assets/m1014/README.png" alt="MATH 1014 Study Aid">
+                                </div>
+                                <div class="project-card-info">
+                                    <h3>MATH 1014 Study Aid</h3>
+                                    <p>An interactive academic aid for York University students. Provides a centralized platform to practice textbook problems with real-time verification and step-by-step solutions.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Budget -->
+                        <div class="project-card">
+                            <a href="https://github.com/tasdidnoor/Budget" target="_blank" class="project-card-link">
+                                <div class="project-card-image">
+                                    <img src="../Assets/Budget/README1.png" alt="Simple Budget Tracker">
+                                </div>
+                                <div class="project-card-info">
+                                    <h3>Simple Budget Tracker</h3>
+                                    <p>A clean, straightforward web application for tracking income and expenses. Features persistent storage and a minimalist, privacy-focused design.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Routine -->
+                        <div class="project-card">
+                            <a href="https://github.com/tasdidnoor/Routine" target="_blank" class="project-card-link">
+                                <div class="project-card-image">
+                                    <img src="../Assets/Routine/README.png" alt="Daily Routine & Notebook">
+                                </div>
+                                <div class="project-card-info">
+                                    <h3>Daily Routine & Notebook</h3>
+                                    <p>A responsive web application for managing daily schedules and notes. Features a dynamic week-view for class schedules and a customizable notebook.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Happy Birthday -->
+                        <div class="project-card">
+                            <a href="https://github.com/tasdidnoor/HappyBirthday" target="_blank" class="project-card-link">
+                                <div class="project-card-image">
+                                    <img src="../Assets/HappyBirthday/README.png" alt="Happy Birthday Friend">
+                                </div>
+                                <div class="project-card-info">
+                                    <h3>Happy Birthday Friend</h3>
+                                    <p>An interactive, mobile-optimized birthday celebration website. Features a staged experience with animations, music, and a personalized letter.</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -816,6 +875,12 @@
                         <i class="fab fa-linkedin-in"></i>
                     </div>
                     <span>LinkedIn</span>
+                </a>
+            </div>
+
+            <div class="resume-container">
+                <a href="Resume_TasdidNoor.pdf" download class="resume-button">
+                    <i class="fas fa-file-download"></i> DOWNLOAD RESUME
                 </a>
             </div>
             
