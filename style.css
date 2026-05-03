@@ -241,10 +241,10 @@ body {
 
 .hero-bottom {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     right: 0;
     width: auto;
-    padding: 20px;
+    padding: 10px 20px;
     text-align: right;
 }
 
