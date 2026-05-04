@@ -1389,8 +1389,8 @@ body {
     }
     
     .image-grid {
-        column-count: 2; /* 2 columns on mobile for readability */
-        column-gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
     
     .certs-grid {
@@ -1440,9 +1440,13 @@ body {
     }
     
     .arts-grid,
-    .image-grid,
     .certs-grid {
         grid-template-columns: 1fr;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
     
     .contact-icons {
