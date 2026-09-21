@@ -95,7 +95,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-title-period { color: var(--vermillion); }
 .hero-name { display: none; }
 .hero-image-mobile { display: none; }
-.hero-favicon-desktop { position: absolute; bottom: 25%; left: 0; z-index: 5; width: 22%; max-width: 300px; }
+.hero-favicon-desktop { position: absolute; bottom: 40%; left: 0; z-index: 5; width: 22%; max-width: 300px; }
 .hero-favicon-desktop img { width: 100%; height: auto; }
 .hero-favicon-mobile { display: none; }
 
