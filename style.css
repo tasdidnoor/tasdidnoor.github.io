@@ -52,8 +52,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
     background: var(--paper); color: #ffffff; transition: opacity .3s ease;
 }
 #loading-screen.fade-out { opacity: 0; pointer-events: none; }
-.loading-text { font: 600 clamp(1.6rem, 4vw, 3.5rem)/.9 var(--serif); letter-spacing: -.03em; animation: loadingTextFade .8s ease both; }
-@keyframes loadingTextFade { 0% { opacity: 0; } 45%, 65% { opacity: 1; } 100% { opacity: 0; } }
+.loading-favicon { display: grid; place-items: center; width: 100%; height: 100%; }
+.loading-favicon img { width: 64px; height: 64px; animation: loadingFaviconFade .8s ease both; }
+@keyframes loadingFaviconFade { 0% { opacity: 0; transform: scale(0.8); } 45%, 65% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.8); } }
 
 .left-menu {
     position: fixed; z-index: 1000; inset: 0 auto 0 0; width: 132px;
@@ -61,9 +62,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
     background: rgba(5, 5, 5, .88); backdrop-filter: blur(14px);
 }
 .left-menu::before {
-    content: 'TN / 01'; position: absolute; top: 1.35rem; left: 50%;
-    transform: translateX(-50%); font: 700 .72rem var(--mono); white-space: nowrap;
-    writing-mode: vertical-rl; letter-spacing: .15em;
+    content: ''; position: absolute; top: 1.35rem; left: 50%;
+    transform: translateX(-50%); width: 32px; height: 32px;
+    background: url('Media/Favicon.png') no-repeat center center;
+    background-size: contain;
 }
 .left-menu ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 2.5rem; }
 .left-menu .menu-link, .mobile-nav .menu-link {
