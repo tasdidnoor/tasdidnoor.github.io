@@ -63,7 +63,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .left-menu::before {
     content: 'TN / 01'; position: absolute; top: 1.35rem; left: 50%;
-    transform: translateX(-50%); font: 700 .72rem var(--mono); white-space: nowrap;
+    transform: translateX(-50%) rotate(180deg); font: 700 .72rem var(--mono); white-space: nowrap;
     writing-mode: vertical-rl; letter-spacing: .15em;
 }
 .left-menu ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 2.5rem; }
@@ -89,15 +89,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .home-section { display: grid; place-items: center; padding: 0; overflow: hidden; background: var(--paper); color: var(--ink); }
 #waves-container, .hero-top { display: none; }
-.hero-bottom { position: absolute; z-index: 2; right: 0; bottom: 0; width: 75vw; margin: 0; padding: 1.5rem 2rem 1.25rem; text-align: right; }
+.hero-bottom { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; width: 100%; margin: 0; padding: 1.5rem 2rem 1.25rem; text-align: right; }
 .hero-subtitle { margin: 0 0 1rem; color: rgba(255,255,255,.7); font: 500 clamp(.85rem, 1.5vw, 1.2rem) var(--mono); letter-spacing: .2em; }
+.hero-title-row { display: flex; align-items: center; justify-content: flex-end; gap: clamp(1rem, 2vw, 2.5rem); width: 100%; }
 .hero-title { margin: 0; color: #ffffff; white-space: nowrap; font: 600 clamp(4rem, 10vw, 11rem)/.8 var(--serif); letter-spacing: -.04em; }
 .hero-title-period { color: var(--vermillion); }
-.hero-name { display: none; }
-.hero-image-mobile { display: none; }
-.hero-favicon-desktop { position: absolute; bottom: 40%; left: 0; z-index: 5; width: 22%; max-width: 300px; }
-.hero-favicon-desktop img { width: 100%; height: auto; }
-.hero-favicon-mobile { display: none; }
+.hero-favicon { flex: 1 1 auto; min-width: 0; height: clamp(4rem, 10vw, 11rem); display: flex; align-items: center; justify-content: center; }
+.hero-favicon img { display: block; width: auto; height: min(400%, 92vh); max-width: none; transform: translateY(10%); }
+.hero-name, .hero-image-mobile { display: none; }
 
 .work-section { padding-right: clamp(2rem, 6vw, 7rem); }
 .work-container { display: grid; grid-template-columns: minmax(150px, 18%) 1fr; gap: clamp(2rem, 5vw, 6rem); max-width: 1500px; margin: 0 auto; }
@@ -214,12 +213,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
     .mobile-nav .menu-link.active::before { transform: scaleX(1); }
     .section { inset: 0; padding: 4.6rem 1.1rem 3rem; }
     .home-section { padding: 0; }
-    .hero-bottom { right: 0; bottom: 0; width: 100vw; margin: 0; padding: .8rem; text-align: right; }
-    .hero-subtitle { margin-bottom: .65rem; padding-right: .5rem; font-size: .72rem; letter-spacing: .14em; }
-    .hero-title { padding-right: .5rem; font-size: clamp(2.35rem, 13.5vw, 6.5rem); letter-spacing: -.04em; }
-    .hero-name, .hero-image-mobile { display: none; }
-    .hero-favicon-mobile { display: block; position: fixed; top: 0; left: 0; z-index: 2001; padding: 0.5rem; }
-    .hero-favicon-mobile img { width: 28px; height: auto; }
+    .hero-bottom { position: absolute; right: 0; bottom: 0; width: 100%; margin: 0; padding: 0 .8rem .8rem; display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+    .hero-title-row { display: contents; }
+    .hero-favicon { order: 1; flex: 0 0 clamp(42px, 12vw, 64px); height: auto; margin-bottom: .55rem; }
+    .hero-favicon img { width: 100%; height: auto; transform: none; }
+    .hero-subtitle { order: 2; margin-bottom: .65rem; padding-right: .5rem; font-size: .72rem; letter-spacing: .14em; }
+    .hero-title { order: 3; padding-right: .5rem; font-size: clamp(2.35rem, 13.5vw, 6.5rem); letter-spacing: -.04em; }
     .work-section { padding-top: 5.8rem; }
     .work-container { display: block; }
     .work-categories { position: fixed; top: 0; z-index: 10; left: 0; right: 0; margin: 0; padding: .65rem 1.1rem; overflow-x: auto; background: rgba(5,5,5,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); scrollbar-width: none; -ms-overflow-style: none; }

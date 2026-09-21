@@ -1,28 +1,15 @@
 // Loading screen logic
 let loadingScreenShown = false;
-window.addEventListener('load', function() {
-    if (loadingScreenShown) return;
-    loadingScreenShown = true;
+document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.getElementById('loading-screen');
-    if (loadingScreen) {
+    if (loadingScreen && !loadingScreenShown) {
+        loadingScreenShown = true;
         setTimeout(() => {
             loadingScreen.classList.add('fade-out');
             setTimeout(() => {
                 loadingScreen.remove();
             }, 300);
-        }, 350);
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Waves Animation
-    if (typeof Waves !== 'undefined' && typeof SimplexNoise !== 'undefined') {
-        window.homeWaves = new Waves('waves-container', {
-            strokeColor: "#60645a",
-            backgroundColor: "#171815",
-            pointerSize: 0.5
-        });
-        window.homeWaves.start();
+        }, 650);
     }
 
     // Navigation
@@ -81,17 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 currentActiveSection.classList.remove('active');
-                if (currentActiveSection.id === 'home' && window.homeWaves) {
-                    window.homeWaves.stop();
-                }
             }
             
             // Show target section and restore its videos
             if (targetSection) {
                 targetSection.classList.add('active');
-                if (targetSection.id === 'home' && window.homeWaves) {
-                    window.homeWaves.start();
-                }
                 
                 // Restore iframes for the section we are entering
                 const iframes = targetSection.querySelectorAll('iframe');
