@@ -153,8 +153,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--paper); border: 1px solid var(--paper); }
 .project-card { min-width: 0; background: var(--paper); }
 .project-card-link { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; }
-.project-card-image { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper); display: grid; place-items: center; }
-.project-card-image img { width: 100%; height: 100%; object-fit: contain; opacity: 1; filter: none; }
+.project-card-image { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-deep); display: grid; place-items: center; border: 1px solid var(--line); }
+.project-card-image img { width: 100%; height: 100%; object-fit: contain; opacity: 1; filter: none; display: block; }
 .project-card-image::after { content: '↗'; position: absolute; inset: auto .8rem .8rem auto; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; background: rgba(5,5,5,.8); color: #ffffff; font: 500 1rem/1 var(--sans); }
 .project-card-info { padding: 1.2rem; }
 .project-card-info h3 { margin: 0 0 .6rem; font: 600 1.35rem/1 var(--serif); }
