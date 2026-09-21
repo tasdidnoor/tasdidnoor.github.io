@@ -78,7 +78,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .left-menu .menu-link:hover, .left-menu .menu-link.active, .mobile-nav .menu-link:hover, .mobile-nav .menu-link.active { color: var(--vermillion); }
 .left-menu .menu-link.active::before { transform: scaleY(1); }
 
-.mobile-nav { display: none; }
+.mobile-nav { display: none; top: 0; }
 .section {
     position: absolute; inset: 0 0 0 132px; min-height: 100dvh; padding: clamp(2rem, 5vw, 5rem);
     overflow-y: auto; opacity: 0; pointer-events: none; visibility: hidden;
@@ -121,6 +121,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .text-container p, .detail-block p, .timeline-content p { margin: 0 0 1rem; color: var(--muted); font-size: .97rem; }
 .video-container { width: 100%; aspect-ratio: 16 / 9; margin-bottom: 1rem !important; background: var(--paper); }
 .video-container iframe { width: 100%; height: 100%; border: 0; }
+.video-container a { display: block; }
+.video-container a img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.video-thumbnail { position: relative; cursor: pointer; }
+.video-thumbnail .video-play-link { display: block; position: relative; width: 100%; height: 100%; }
+.video-thumbnail .play-button-overlay {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+}
+.video-thumbnail .play-icon {
+    width: 60px; height: 60px;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    transition: transform 0.2s ease;
+}
+.video-thumbnail:hover .play-icon {
+    transform: scale(1.1);
+}
 .image-container { margin-bottom: 1rem; }
 .responsive-img { display: block; width: 100%; height: auto; object-fit: contain; }
 .art-img, .art-featured, .grid-img { border: 1px solid var(--line); background: var(--paper-deep); transition: transform .35s ease, filter .35s ease; }
@@ -201,7 +216,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
     .hero-name, .hero-image-mobile { display: none; }
     .work-section { padding-top: 5.8rem; }
     .work-container { display: block; }
-    .work-categories { position: sticky; top: -1px; z-index: 10; margin: -1rem -1.1rem 1.25rem; padding: .65rem 1.1rem; overflow-x: auto; background: rgba(5,5,5,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .work-categories { position: fixed; top: 0; z-index: 10; left: 0; right: 0; margin: 0; padding: .65rem 1.1rem; overflow-x: auto; background: rgba(5,5,5,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); scrollbar-width: none; -ms-overflow-style: none; }
+.work-categories::-webkit-scrollbar { display: none; }
     .work-categories ul { display: flex; gap: 1.25rem; width: max-content; }
     .work-category { font-size: .72rem; }
     .work-category::before { display: none; }
