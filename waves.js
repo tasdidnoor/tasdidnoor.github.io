@@ -33,7 +33,7 @@ class Waves {
 
     init() {
         // Create SVG
-        this.svg = document.createElementNS('http://www.w3.org......./2000/svg', 'svg');
+        this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         this.svg.classList.add('block', 'w-full', 'h-full');
         this.svg.style.display = 'block';
         this.svg.style.width = '100%';
@@ -44,7 +44,7 @@ class Waves {
         this.setLines();
 
         this.onResize = this.onResize.bind(this);
-        this.onMouseMove = this.onMouseMove.bind(this);4
+        this.onMouseMove = this.onMouseMove.bind(this);
         this.onTouchMove = this.onTouchMove.bind(this);
         this.tick = this.tick.bind(this);
 

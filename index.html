@@ -7,21 +7,18 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Official portfolio of Tasdid Noor. A Toronto-based multidisciplinary creator, Electrical Engineering student, and actor known for Soulpepper Theatre and NTV Utsho.">
-    <meta name="keywords" content="Tasdid Noor, Toronto Actor, York University Engineering, Electrical Engineering Portfolio, Soulpepper Theatre, NTV Utsho, Multidisciplinary Creator, Arts and Technology, 
-    Tasdid Al Noor, Acting Portfolio, Engineering Projects, Creative Work, Personal Portfolio, Multitalented Artist, Toronto Creatives, Engineering and Arts, Performance and Technology,  Creative Portfolio, 
-    Multidisciplinary Artist, Engineering Showcase, Acting Highlights, Arts and Performance, Toronto Talent, Personal Website, Creative Showcase, Multitalented Portfolio, Engineering and Acting, Arts and Technology, 
-    Toronto Actor Portfolio, York University Student, Multidisciplinary Work, Creative Projects, Personal Showcase, Multitalented Creator, Engineering and Arts, Performance Portfolio, Toronto Creatives, Personal Website, 
-    Creative Showcase, Multitalented Portfolio, Engineering and Acting, Arts and Technology, Toronto Actor Portfolio, York University Student, Multidisciplinary Work, Creative Projects, Personal Showcase, Multitalented Creator, 
-    Engineering and Arts, Performance Portfolio, Toronto Creatives, Personal Website, Creative Showcase, Multitalented Portfolio, Engineering and Acting, Arts and Technology, Toronto Actor Portfolio, York University Student, 
-    Multidisciplinary Work, Creative Projects, Personal Showcase">
+    <meta name="theme-color" content="#050505">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://tasdidnoor.com/">
     <meta name="author" content="Tasdid Noor">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tasdidnoor.com/">
-    <meta property="og:title" content="Tasdid Noor | Multidisciplinary Creator & Engineer">
+    <meta property="og:title" content="Tasdid Noor | Official Portfolio">
     <meta property="og:description" content="Exploring the intersection of art, technology, and performance. View my work in engineering, acting, arts, and more.">
-    <meta property="og:image" content="https://tasdidnoor.com/Media/Favicon.png">
+    <meta property="og:image" content="https://tasdidnoor.com/Media/Hero-Image.png">
+    <meta property="og:image:alt" content="Tasdid Noor portfolio title artwork">
 
     <link rel="icon" type="image/png" sizes="32x32" href="Media/Favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Media/Favicon.png">
@@ -44,41 +41,22 @@
             "https://x.com/tasdidnoor",
             "https://open.spotify.com/user/31gwmuddecgsdri2yft2by4kwxlq"
         ],
-        "jobTitle": "Multidisciplinary Creator & Engineer",
-        "description": "A Toronto-based multidisciplinary creator, Electrical Engineering student, and actor known for Soulpepper Theatre and NTV Utsho."
+        "jobTitle": "Artist & Engineer",
+        "description": "A Toronto-based creator, Computer Engineering student, and actor known for Soulpepper Theatre."
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400;900&family=Alfa+Slab+One:wght@400;900&family=Bebas+Neue&family=Impact&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-        /* Hide scrollbars but keep scrolling functionality */
-        * {
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE and Edge */
-        }
-        
-        *::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-        }
-
-        #waves-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            background-color: #000;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div id="loading-screen">
         <div class="loading-text">TASDID NOOR</div>
     </div>
     
     <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
+    <nav class="mobile-nav nav-top" aria-label="Primary navigation">
         <a href="#home" class="menu-link active">HOME</a>
         <a href="#work" class="menu-link">WORK</a>
         <a href="#about" class="menu-link">ABOUT</a>
@@ -86,7 +64,7 @@
     </nav>
     
     <!-- Left Menu -->
-    <nav class="left-menu">
+    <nav class="left-menu" aria-label="Primary navigation">
         <ul>
             <li><a href="#home" class="menu-link active">HOME</a></li>
             <li><a href="#work" class="menu-link">WORK</a></li>
@@ -95,14 +73,14 @@
         </ul>
     </nav>
 
+    <main id="main-content">
     <!-- Home Section -->
     <section id="home" class="section home-section active">
         <div id="waves-container"></div>
         <div class="hero-top"></div>
         <div class="hero-bottom">
             <p class="hero-subtitle">PERSONAL PORTFOLIO</p>
-            <h1 class="hero-name">TASDID NOOR</h1>
-            <img src="Media/Hero-Image.png" alt="Tasdid Noor" class="hero-image-mobile">
+            <h1 class="hero-title">TASDID NOOR<span class="hero-title-period">.</span></h1>
         </div>
     </section>
 
@@ -133,7 +111,9 @@
                         <div class="media-container">
                             <div class="video-container" style="height: 380px; margin-bottom: 30px;">
                                 <iframe src="https://drive.google.com/file/d/1PQN2pDlcWXx-ld09UGDEWnUcdIDcSkh-/preview" 
-                                frameborder="0"
+                                title="The Diner performance video"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
                                 allowfullscreen>
                                 </iframe>
                             </div>
@@ -153,7 +133,9 @@
                         <div class="media-container">
                             <div class="video-container">
                                 <iframe src="https://www.youtube.com/embed/CeVdduPwMAU" 
-                                frameborder="0"
+                                title="NTV Utsho performance video"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
                                 allowfullscreen
                                 allow="autoplay">
                                 </iframe>
@@ -263,7 +245,7 @@
                 
                 <div class="display-content music-content" id="music-content">
                     <h2 class="music-title">Music</h2>
-                    <a href="https://open.spotify.com/artist/" target="_blank" class="spotify-link">
+                    <a href="https://open.spotify.com/artist/" target="_blank" rel="noopener noreferrer" class="spotify-link">
                         <i class="fab fa-spotify"></i> Listen on Spotify
                     </a>
                     <div class="discography">
@@ -305,9 +287,9 @@
 
                         <!-- nodeBridge -->
                         <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/nodeBridge" target="_blank" class="project-card-link">
+                            <a href="https://github.com/tasdidnoor/nodeBridge" target="_blank" rel="noopener noreferrer" class="project-card-link">
                                 <div class="project-card-image">
-                                    <img src="../Assets/nodeBridge/3dSketch.png" alt="nodeBridge">
+                                    <img src="Assets/nodeBridge.png" alt="nodeBridge">
                                 </div>
                                 <div class="project-card-info">
                                     <h3>nodeBridge</h3>
@@ -318,9 +300,9 @@
 
                         <!-- LockBox -->
                         <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/LockBox" target="_blank" class="project-card-link">
+                            <a href="https://github.com/tasdidnoor/LockBox" target="_blank" rel="noopener noreferrer" class="project-card-link">
                                 <div class="project-card-image">
-                                    <img src="../Assets/LockBox/MainView.png" alt="LockBox: A Study Toolkit">
+                                    <img src="Assets/LockBox.png" alt="LockBox: A Study Toolkit">
                                 </div>
                                 <div class="project-card-info">
                                     <h3>LockBox: A Study Toolkit</h3>
@@ -331,9 +313,9 @@
 
                         <!-- HomeServer -->
                         <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/HomeServer" target="_blank" class="project-card-link">
+                            <a href="https://github.com/tasdidnoor/HomeServer" target="_blank" rel="noopener noreferrer" class="project-card-link">
                                 <div class="project-card-image">
-                                    <img src="../Assets/nodeBridge/CasaOsDashboard.png" alt="Ubuntu Home Server">
+                                    <img src="Assets/HomeServer.png" alt="Ubuntu Home Server">
                                 </div>
                                 <div class="project-card-info">
                                     <h3>Ubuntu Home Server</h3>
@@ -342,24 +324,11 @@
                             </a>
                         </div>
 
-                        <!-- EyeTrackingMouse -->
-                        <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/EyeTrackingMouse" target="_blank" class="project-card-link">
-                                <div class="project-card-image">
-                                    <img src="../Assets/EyeTrackerMouse/WebDashBoard.png" alt="Eye Control Accessibility Tool">
-                                </div>
-                                <div class="project-card-info">
-                                    <h3>Eye Control Accessibility Tool</h3>
-                                    <p>A software-based accessibility tool that allows users to control their system's mouse cursor using eye and head movements. It utilizes advanced computer vision to track iris positioning and facial orientation in real-time.</p>
-                                </div>
-                            </a>
-                        </div>
-
                         <!-- Plant Watering JAVA -->
                         <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/AutomaticPlantWateringSystem_JAVA" target="_blank" class="project-card-link">
+                            <a href="https://github.com/tasdidnoor/AutomaticPlantWateringSystem_JAVA" target="_blank" rel="noopener noreferrer" class="project-card-link">
                                 <div class="project-card-image">
-                                    <img src="../Assets/PlantWatering_JAVA/MainSetup.png" alt="Auto Plant Watering System (Java)">
+                                    <img src="Assets/PlantWateringJava.png" alt="Auto Plant Watering System (Java)">
                                 </div>
                                 <div class="project-card-info">
                                     <h3>Auto Plant Watering System (Java)</h3>
@@ -370,9 +339,9 @@
 
                         <!-- Plant Watering MATLAB -->
                         <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/AutomaticPlantWateringSystem_MATLAB" target="_blank" class="project-card-link">
+                            <a href="https://github.com/tasdidnoor/AutomaticPlantWateringSystem_MATLAB" target="_blank" rel="noopener noreferrer" class="project-card-link">
                                 <div class="project-card-image">
-                                    <img src="../Assets/PlantWatering_MATLAB/README.png" alt="Autonomous Irrigation System (MATLAB)">
+                                    <img src="Assets/PlantWateringMATLAB.png" alt="Autonomous Irrigation System (MATLAB)">
                                 </div>
                                 <div class="project-card-info">
                                     <h3>Auto Plant Watering System (MATLAB)</h3>
@@ -381,70 +350,6 @@
                             </a>
                         </div>
 
-                        <!-- WindPoweredCar -->
-                        <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/Wind-Powered-Car" target="_blank" class="project-card-link">
-                                <div class="project-card-image">
-                                    <img src="../Assets/WindPoweredCar/WindCar1.png" alt="Wind-Powered Car Prototype">
-                                </div>
-                                <div class="project-card-info">
-                                    <h3>Wind-Powered Car Prototype</h3>
-                                    <p>A 3D-printed car project designed as an educational tool for Young Engineers. This project features a modular 3D-printed body where students can experiment with different wheel sizes and sail designs.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- m1014 -->
-                        <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/m1014" target="_blank" class="project-card-link">
-                                <div class="project-card-image">
-                                    <img src="../Assets/m1014/README.png" alt="MATH 1014 Study Aid">
-                                </div>
-                                <div class="project-card-info">
-                                    <h3>MATH 1014 Study Aid</h3>
-                                    <p>An interactive academic aid for York University students. Provides a centralized platform to practice textbook problems with real-time verification and step-by-step solutions.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Happy Birthday -->
-                        <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/HappyBirthday" target="_blank" class="project-card-link">
-                                <div class="project-card-image">
-                                    <img src="../Assets/HappyBirthday/README2.png" alt="Happy Birthday Friend">
-                                </div>
-                                <div class="project-card-info">
-                                    <h3>Happy Birthday Friend</h3>
-                                    <p>An interactive, minimalist birthday celebration website featuring staged animations, background music, and a personalized digital letter.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Routine -->
-                        <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/Routine" target="_blank" class="project-card-link">
-                                <div class="project-card-image">
-                                    <img src="../Assets/Routine/README.png" alt="Daily Routine & Notebook">
-                                </div>
-                                <div class="project-card-info">
-                                    <h3>Daily Routine & Notebook</h3>
-                                    <p>A responsive web application for managing daily schedules and personal notes. Features a dynamic week-view for class schedules and a customizable notebook interface.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Budget -->
-                        <div class="project-card">
-                            <a href="https://github.com/tasdidnoor/Budget" target="_blank" class="project-card-link">
-                                <div class="project-card-image">
-                                    <img src="../Assets/Budget/README1.png" alt="Simple Budget Tracker">
-                                </div>
-                                <div class="project-card-info">
-                                    <h3>Simple Budget Tracker</h3>
-                                    <p>A clean, straightforward web application for tracking income and expenses. Features persistent local storage and a minimalist design to help users manage their finances effectively.</p>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
@@ -519,37 +424,37 @@
                         <p>Words woven with emotion, each poem a reflection of moments captured in verse.</p>
                     </div>
                     <div class="poems-container">
-                        <a href="https://www.tumblr.com/tasdidnoor/809753573388861440/sweetest-death?source=share" target="_blank" class="poem-box">
+                        <a href="https://www.tumblr.com/tasdidnoor/809753573388861440/sweetest-death?source=share" target="_blank" rel="noopener noreferrer" class="poem-box">
                             <h3 class="poem-title">Sweetest Death</h3>
                             <p class="poem-date">September 12, 2022</p>
                             <p class="poem-author">Tasdid Noor</p>
                             <p class="poem-snippet">It feels like the end<br>My visions getting blurry<br>I cant stand anymore<br>I was always in a hurry.....</p>
                         </a>
-                        <a href="https://www.tumblr.com/tasdidnoor/809945196218449920/what-she-gave-away?source=share" target="_blank" class="poem-box">
+                        <a href="https://www.tumblr.com/tasdidnoor/809945196218449920/what-she-gave-away?source=share" target="_blank" rel="noopener noreferrer" class="poem-box">
                             <h3 class="poem-title">What She Gave Away</h3>
                             <p class="poem-date">November 7, 2022</p>
                             <p class="poem-author">Tasdid Noor</p>
                             <p class="poem-snippet">She packed her whole life into bags,<br>left behind her home, her flags,<br>her language and her familiar street,<br>just so I could land on my feet.....</p>
                         </a>
-                        <a href="https://www.tumblr.com/tasdidnoor/809938872086740992/the-sky-looked-beautiful-today?source=share" target="_blank" class="poem-box">
+                        <a href="https://www.tumblr.com/tasdidnoor/809938872086740992/the-sky-looked-beautiful-today?source=share" target="_blank" rel="noopener noreferrer" class="poem-box">
                             <h3 class="poem-title">The Sky Looked Beautiful Today</h3>
                             <p class="poem-date">January 18, 2026</p>
                             <p class="poem-author">Tasdid Noor</p>
                             <p class="poem-snippet">The sky looked beautiful today,<br>the blue so wide it made me stay,<br>I stood there like I used to stand<br>at fifteen, foreign, cold, unmanned.....</p>
                         </a>
-                        <a href="https://www.tumblr.com/tasdidnoor/809942522932740096/her?source=share" target="_blank" class="poem-box">
+                        <a href="https://www.tumblr.com/tasdidnoor/809942522932740096/her?source=share" target="_blank" rel="noopener noreferrer" class="poem-box">
                             <h3 class="poem-title">Her</h3>
                             <p class="poem-date">May 4, 2023</p>
                             <p class="poem-author">Tasdid Noor</p>
                             <p class="poem-snippet">She was standing at the board that day,<br>I walked in and forgot what to say,<br>fifteen, foreign, still finding my feet,<br>and she was the most beautiful thing on that street.....</p>
                         </a>
-                        <a href="https://www.tumblr.com/tasdidnoor/809945863426326528/what-if-today?source=share" target="_blank" class="poem-box">
+                        <a href="https://www.tumblr.com/tasdidnoor/809945863426326528/what-if-today?source=share" target="_blank" rel="noopener noreferrer" class="poem-box">
                             <h3 class="poem-title">What If Today</h3>
                             <p class="poem-date">August 27, 2023</p>
                             <p class="poem-author">Tasdid Noor</p>
                             <p class="poem-snippet">What if today was the last of it,<br>the last coffee, the last bit<br>of morning light across the floor,<br>the last time walking out the door.....</p>
                         </a>
-                        <a href="https://www.tumblr.com/tasdidnoor/809946870576283648/the-moon?source=share" target="_blank" class="poem-box">
+                        <a href="https://www.tumblr.com/tasdidnoor/809946870576283648/the-moon?source=share" target="_blank" rel="noopener noreferrer" class="poem-box">
                             <h3 class="poem-title">The Moon</h3>
                             <p class="poem-date">March 24, 2024</p>
                             <p class="poem-author">Tasdid Noor</p>
@@ -906,37 +811,37 @@
             <p class="contact-subtitle">For collaborations, inquiries, or just to say hello.</p>
             
             <div class="contact-icons">
-                <a href="https://www.instagram.com/tasdidnoor/" target="_blank" class="icon-link">
+                <a href="https://www.instagram.com/tasdidnoor/" target="_blank" rel="noopener noreferrer" class="icon-link">
                     <div class="icon-circle">
                         <i class="fab fa-instagram"></i>
                     </div>
                     <span>Instagram</span>
                 </a>
-                <a href="https://github.com/tasdidnoor" target="_blank" class="icon-link">
+                <a href="https://github.com/tasdidnoor" target="_blank" rel="noopener noreferrer" class="icon-link">
                     <div class="icon-circle">
                         <i class="fab fa-github"></i>
                     </div>
                     <span>GitHub</span>
                 </a>
-                <a href="https://www.youtube.com/@tasdidnoor815" target="_blank" class="icon-link">
+                <a href="https://www.youtube.com/@tasdidnoor815" target="_blank" rel="noopener noreferrer" class="icon-link">
                     <div class="icon-circle">
                         <i class="fab fa-youtube"></i>
                     </div>
                     <span>YouTube</span>
                 </a>
-                <a href="https://open.spotify.com/user/31gwmuddecgsdri2yft2by4kwxlq" target="_blank" class="icon-link">
+                <a href="https://open.spotify.com/user/31gwmuddecgsdri2yft2by4kwxlq" target="_blank" rel="noopener noreferrer" class="icon-link">
                     <div class="icon-circle">
                         <i class="fab fa-spotify"></i>
                     </div>
                     <span>Spotify</span>
                 </a>
-                <a href="https://x.com/tasdidnoor" target="_blank" class="icon-link">
+                <a href="https://x.com/tasdidnoor" target="_blank" rel="noopener noreferrer" class="icon-link">
                     <div class="icon-circle">
                         <i class="fab fa-twitter"></i>
                     </div>
                     <span>Twitter</span>
                 </a>
-                <a href="https://www.linkedin.com/in/tasdidnoor/" target="_blank" class="icon-link">
+                <a href="https://www.linkedin.com/in/tasdidnoor/" target="_blank" rel="noopener noreferrer" class="icon-link">
                     <div class="icon-circle">
                         <i class="fab fa-linkedin-in"></i>
                     </div>
@@ -956,7 +861,9 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" crossorigin="anonymous"></script>
     <script src="waves.js"></script>
     <script src="script.js"></script>
     

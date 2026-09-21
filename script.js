@@ -9,17 +9,17 @@ window.addEventListener('load', function() {
             loadingScreen.classList.add('fade-out');
             setTimeout(() => {
                 loadingScreen.remove();
-            }, 800);
-        }, 1500);
+            }, 300);
+        }, 350);
     }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Waves Animation
-    if (typeof Waves !== 'undefined') {
+    if (typeof Waves !== 'undefined' && typeof SimplexNoise !== 'undefined') {
         window.homeWaves = new Waves('waves-container', {
-            strokeColor: "#333333", // Dark grey waves
-            backgroundColor: "#000000", // Black background
+            strokeColor: "#60645a",
+            backgroundColor: "#171815",
             pointerSize: 0.5
         });
         window.homeWaves.start();
@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('.menu-link');
     const sections = document.querySelectorAll('.section');
     const mobileNav = document.querySelector('.mobile-nav');
+    const resetSectionScroll = section => {
+        if (!section) return;
+        section.scrollTo(0, 0);
+        section.querySelectorAll('.work-display, .work-categories').forEach(scrollable => {
+            scrollable.scrollTo(0, 0);
+        });
+    };
     
     // Set initial state for mobile nav
     if (mobileNav) {
@@ -104,13 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.documentElement.style.overflow = 'auto';
                 }
                 
-                targetSection.scrollTo(0, 0);
+                resetSectionScroll(targetSection);
                 window.scrollTo(0, 0);
             }
         });
     });
     
-    // Set initial overflow for home
+    // Keep the active panel in control of scrolling; the home canvas is intentionally fixed.
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
     window.scrollTo(0, 0);
