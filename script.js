@@ -381,6 +381,94 @@ document.addEventListener('DOMContentLoaded', function() {
     // adjustImageSize('.art-img', 350); // Make art images 350px tall
     // adjustImageSize('.grid-img', 250); // Make grid images 250px tall
     
+    // ===== EMBED PUBLIC GITHUB PROFILE DATA =====
+    const githubEmbed = document.querySelector('.github-embed');
+    if (githubEmbed) {
+        const githubApi = 'https://api.github.com/users/tasdidnoor';
+        const repositoryList = githubEmbed.querySelector('[data-github-repositories]');
+        const setStat = (selector, value) => {
+            const element = githubEmbed.querySelector(selector);
+            if (element && value !== undefined && value !== null) {
+                element.textContent = new Intl.NumberFormat().format(value);
+            }
+        };
+
+        const makeRepositoryCard = repo => {
+            const link = document.createElement('a');
+            link.className = 'github-repository';
+            link.href = repo.html_url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+
+            const name = document.createElement('h5');
+            name.className = 'github-repository-name';
+            name.innerHTML = '<i class="far fa-folder-open" aria-hidden="true"></i>';
+            name.append(document.createTextNode(repo.name));
+
+            const description = document.createElement('p');
+            description.className = 'github-repository-description';
+            description.textContent = repo.description || 'No description provided.';
+
+            const meta = document.createElement('div');
+            meta.className = 'github-repository-meta';
+            if (repo.language) {
+                const language = document.createElement('span');
+                language.textContent = repo.language;
+                meta.append(language);
+            }
+            const stars = document.createElement('span');
+            stars.innerHTML = '<i class="far fa-star" aria-hidden="true"></i> ' + new Intl.NumberFormat().format(repo.stargazers_count || 0);
+            const forks = document.createElement('span');
+            forks.innerHTML = '<i class="fas fa-code-branch" aria-hidden="true"></i> ' + new Intl.NumberFormat().format(repo.forks_count || 0);
+            meta.append(stars, forks);
+
+            link.append(name, description, meta);
+            return link;
+        };
+
+        const fetchJson = async url => {
+            const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
+            if (!response.ok) throw new Error(`GitHub API returned ${response.status}`);
+            return response.json();
+        };
+
+        Promise.allSettled([
+            fetchJson(githubApi),
+            fetchJson(`${githubApi}/repos?sort=pushed&per_page=4`),
+            fetchJson('https://api.github.com/search/commits?q=author%3Atasdidnoor')
+        ]).then(([profileResult, reposResult, commitsResult]) => {
+            if (profileResult.status === 'fulfilled') {
+                const profile = profileResult.value;
+                const avatar = githubEmbed.querySelector('.github-avatar');
+                const bio = githubEmbed.querySelector('.github-bio');
+                if (avatar && profile.avatar_url) avatar.src = profile.avatar_url;
+                if (bio && profile.bio) bio.textContent = profile.bio;
+                setStat('[data-github-repos]', profile.public_repos);
+                setStat('[data-github-followers]', profile.followers);
+            }
+
+            if (commitsResult.status === 'fulfilled') {
+                setStat('[data-github-commits]', commitsResult.value.total_count);
+            }
+
+            if (repositoryList && reposResult.status === 'fulfilled') {
+                const repositories = reposResult.value.filter(repo => !repo.fork).slice(0, 4);
+                repositoryList.replaceChildren(...repositories.map(makeRepositoryCard));
+                if (!repositories.length) {
+                    const message = document.createElement('p');
+                    message.className = 'github-error';
+                    message.textContent = 'No public repositories are available to show right now.';
+                    repositoryList.append(message);
+                }
+            } else if (repositoryList) {
+                const message = document.createElement('p');
+                message.className = 'github-error';
+                message.textContent = 'Repository details are temporarily unavailable. Visit GitHub to browse all projects.';
+                repositoryList.replaceChildren(message);
+            }
+        });
+    }
+
     // ===== SET CURRENT YEAR =====
     const currentYear = new Date().getFullYear();
     const yearElements = document.querySelectorAll('#current-year');

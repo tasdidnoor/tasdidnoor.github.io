@@ -153,6 +153,47 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .grid-item { min-width: 0; }
 
 .projects-title, .pottery-title, .photography-title, .certifications-title { font-family: var(--serif); }
+.profile-embed { width: 100%; margin: 0 0 2.5rem; overflow: hidden; border: 1px solid var(--line); background: #0d0d0d; }
+.profile-embed-kicker { display: flex; align-items: center; gap: .55rem; margin: 0 0 .5rem; color: var(--muted); font: 500 .68rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.github-profile-header { display: flex; align-items: center; gap: 1.4rem; padding: clamp(1.2rem, 3vw, 2rem); border-bottom: 1px solid var(--line); }
+.github-avatar { flex: 0 0 96px; width: 96px; height: 96px; border: 2px solid rgba(255,255,255,.15); border-radius: 50%; object-fit: cover; background: var(--paper-deep); }
+.github-profile-identity { min-width: 0; flex: 1; }
+.github-profile-identity h3, .imdb-profile-identity h3 { margin: 0; font: 600 clamp(1.5rem, 3vw, 2rem)/1.1 var(--serif); }
+.github-username { color: var(--muted); font: .85rem var(--mono); text-decoration: none; }
+.github-username:hover, .profile-embed-section-heading a:hover { color: var(--vermillion); }
+.github-bio, .imdb-profile-summary { max-width: 650px; margin: .75rem 0 0; color: var(--muted); font-size: .9rem; }
+.profile-embed-visit { display: inline-flex; align-items: center; gap: .65rem; flex: 0 0 auto; padding: .65rem .85rem; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font: 500 .72rem var(--mono); transition: border-color .2s ease, color .2s ease; }
+.profile-embed-visit:hover { border-color: var(--vermillion); color: var(--vermillion); }
+.github-profile-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.github-stat { display: grid; gap: .2rem; padding: 1rem 1.4rem; }
+.github-stat + .github-stat { border-left: 1px solid var(--line); }
+.github-stat strong { font: 600 1.25rem/1 var(--serif); }
+.github-stat span { color: var(--muted); font: .67rem/1.5 var(--mono); }
+.github-repositories, .imdb-credits { padding: 1.2rem clamp(1rem, 2.5vw, 1.5rem) 1.5rem; }
+.profile-embed-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 1rem; }
+.profile-embed-section-heading h4 { margin: 0; font: 600 1.1rem/1.2 var(--serif); }
+.profile-embed-section-heading a { color: var(--muted); font: .66rem var(--mono); text-decoration: none; white-space: nowrap; }
+.github-repository-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.github-repository { min-width: 0; padding: .9rem 1rem; border: 1px solid var(--line); background: rgba(255,255,255,.025); color: var(--ink); text-decoration: none; transition: border-color .2s ease, background .2s ease; }
+.github-repository:hover { border-color: var(--vermillion); background: rgba(255,255,255,.05); }
+.github-repository-name { display: flex; align-items: center; gap: .5rem; margin: 0 0 .45rem; font: 500 .88rem var(--mono); overflow-wrap: anywhere; }
+.github-repository-description { min-height: 2.8em; margin: 0 0 .75rem; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+.github-repository-meta { display: flex; flex-wrap: wrap; gap: .8rem; color: var(--muted); font: .65rem var(--mono); }
+.github-loading, .github-error { margin: 0; padding: 1rem; border: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+.imdb-profile-header { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2rem); padding: clamp(1.2rem, 3vw, 2rem); border-bottom: 1px solid var(--line); }
+.imdb-profile-photo { flex: 0 0 132px; width: 132px; height: 154px; border: 1px solid var(--line); background: var(--paper-deep); object-fit: cover; object-position: center 30%; }
+.imdb-profile-identity { flex: 1; min-width: 0; }
+.imdb-wordmark { display: inline-block; padding: .05rem .3rem; border-radius: 3px; background: #f5c518; color: #111; font: 700 .76rem/1.5 var(--sans); letter-spacing: -.04em; }
+.imdb-profile-summary { margin-bottom: 1rem; }
+.imdb-visit { display: inline-flex; }
+.imdb-credit-source { color: var(--muted); font: .62rem var(--mono); }
+.imdb-credit-row { display: grid; grid-template-columns: minmax(90px, .23fr) minmax(150px, 1fr) minmax(145px, .65fr); align-items: center; gap: 1rem; padding: .9rem .2rem; border-top: 1px solid var(--line); }
+.imdb-credit-year, .imdb-credit-role { color: var(--muted); font: .7rem var(--mono); }
+.imdb-credit-title { display: grid; gap: .18rem; color: var(--ink); text-decoration: none; }
+.imdb-credit-title:hover strong { color: var(--vermillion); }
+.imdb-credit-title strong { font: 600 1rem/1.2 var(--serif); }
+.imdb-credit-title small { color: var(--muted); font-size: .72rem; }
+.imdb-credit-role { text-align: right; }
 .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--paper); border: 1px solid var(--paper); }
 .project-card { min-width: 0; background: var(--paper); }
 .project-card-link { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; }
@@ -230,6 +271,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
     .arts-grid, .image-grid, .certs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
     .photography-content .image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .contact-icons { grid-template-columns: repeat(3, 1fr); }
+    .github-profile-header { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: .9rem; }
+    .github-avatar { width: 72px; height: 72px; }
+    .github-profile-header .profile-embed-visit { grid-column: 1 / -1; justify-self: start; }
+    .github-profile-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .github-stat { padding: .8rem .65rem; }
+    .github-stat span { font-size: .58rem; }
+    .github-repository-list { grid-template-columns: 1fr; }
+    .imdb-profile-header { align-items: flex-start; }
+    .imdb-profile-photo { flex-basis: 88px; width: 88px; height: 112px; }
+    .imdb-credit-row { grid-template-columns: 75px minmax(0, 1fr); gap: .35rem .75rem; }
+    .imdb-credit-role { grid-column: 2; text-align: left; }
     .projects-grid { grid-template-columns: 1fr; }
     .timeline-item-simple { grid-template-columns: 65px 1fr; gap: 1rem; }
 }
