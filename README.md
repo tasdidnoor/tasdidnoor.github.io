@@ -5,13 +5,6 @@ A multidisciplinary personal portfolio showcasing acting, engineering, arts, and
 ### Link
 **[tasdidnoor.com](https://tasdidnoor.com)**
 
-### Screenshots
-![Screenshot 1](Media/README.png)
-![Screenshot 3](Media/README3.png)
-![Screenshot 2](Media/README2.png)
-![Screenshot 4](Media/README4.png)
-
-
 ## Current Project Structure
 - `index.html`: Core structure and content.
 - `style.css`: Cinematic design and responsive layouts.
