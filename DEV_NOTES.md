@@ -9,7 +9,7 @@
 ## Key Features & Fixes
 - **Startup Performance:** The unused waves animation and simplex-noise dependency were removed so the home section opens without unnecessary animation work.
 - **Masonry Gallery:** Photography and Pottery sections use a 3-column (desktop) / 2-column (mobile) masonry layout using CSS `column-count`.
-- **Video Control:** Implemented a system to prevent background audio by resetting `iframe` sources when switching sections/categories.
+- **Video Control:** `iframe` sources are reset when switching sections/categories to prevent background audio, and the Soulpepper video uses a click-to-play thumbnail (`.video-facade`) so the embed is only injected after a visitor clicks it.
 - **Mobile Spacing:** Hero image on mobile is positioned at `bottom: 20px` when the nav is at the top to fill the vacant space.
 - **Transparent Assets:** Hero image (`Media/Hero-Image.png`) is a transparent PNG for layered home-section visuals.
 - **SEO & Domain:** Configured for `tasdidnoor.com` with `sitemap.xml` and `robots.txt`.

@@ -24,6 +24,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
+    // ===== CLICK-TO-PLAY VIDEO EMBEDS =====
+    // Videos are only loaded once the visitor clicks the thumbnail, so entering a
+    // section never starts playback on its own.
+    const mountVideoEmbed = facade => {
+        const container = facade.closest('.video-thumbnail');
+        if (!container) return;
+        const videoId = container.getAttribute('data-video-id');
+        if (!videoId || container.querySelector('iframe')) return;
+
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`;
+        iframe.title = container.getAttribute('data-video-title') || 'Video';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.setAttribute('data-click-to-play', '');
+
+        facade.hidden = true;
+        container.appendChild(iframe);
+    };
+
+    // Drop any embed the visitor started so it never resumes on a later visit.
+    const unmountVideoEmbeds = root => {
+        root.querySelectorAll('iframe[data-click-to-play]').forEach(iframe => {
+            const container = iframe.closest('.video-thumbnail');
+            iframe.remove();
+            const facade = container ? container.querySelector('.video-facade') : null;
+            if (facade) facade.hidden = false;
+        });
+    };
+
+    document.querySelectorAll('.video-facade').forEach(facade => {
+        facade.addEventListener('click', function(e) {
+            if (!this.closest('.video-thumbnail[data-video-id]')) return;
+            e.preventDefault();
+            mountVideoEmbed(this);
+        });
+    });
+
     // Set initial state for mobile nav
     if (mobileNav) {
         mobileNav.classList.add('nav-top');
@@ -58,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Handle iframes in the section we are leaving
             if (currentActiveSection) {
+                unmountVideoEmbeds(currentActiveSection);
                 const iframes = currentActiveSection.querySelectorAll('iframe');
                 iframes.forEach(iframe => {
                     // Store the current src and clear it to stop playback definitively
@@ -153,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Handle iframes in the content we are leaving
             if (currentActiveContent) {
+                unmountVideoEmbeds(currentActiveContent);
                 const iframes = currentActiveContent.querySelectorAll('iframe');
                 iframes.forEach(iframe => {
                     const src = iframe.getAttribute('src');
