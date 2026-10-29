@@ -1,4 +1,12 @@
+# This site is unlisted on purpose. Nothing here is meant for search results.
+#
+# The real de-indexing signal is the "noindex" meta tag in index.html. Crawlers
+# can only read that tag if they are still allowed to fetch the page, so crawling
+# is intentionally left open here. Do NOT add "Disallow: /" until Google has
+# dropped the site - a blocked page cannot be crawled, so its noindex tag is
+# never seen and the URL can stay listed (as a bare link) indefinitely.
+#
+# Once the site is gone from Google, "Disallow: /" can be enabled as extra cover.
+
 User-agent: *
 Allow: /
-
-Sitemap: https://tasdidnoor.com/sitemap.xml

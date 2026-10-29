@@ -12,7 +12,7 @@
 - **Video Control:** `iframe` sources are reset when switching sections/categories to prevent background audio, and the Soulpepper video uses a click-to-play thumbnail (`.video-facade`) so the embed is only injected after a visitor clicks it.
 - **Mobile Spacing:** Hero image on mobile is positioned at `bottom: 20px` when the nav is at the top to fill the vacant space.
 - **Transparent Assets:** Hero image (`Media/Hero-Image.png`) is a transparent PNG for layered home-section visuals.
-- **SEO & Domain:** Configured for `tasdidnoor.com` with `sitemap.xml` and `robots.txt`.
+- **Search Visibility (unlisted by design):** The site is meant to be reachable only through a link shared directly. `index.html` carries `noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate` robots meta tags (plus a `googlebot` copy); the sitemap and the schema.org `Person` structured data were removed. `robots.txt` intentionally does **not** block crawling, because crawlers must be able to fetch the page to read the `noindex` tag. Do not add `Disallow: /` until Google has dropped the site.
 
 ## Technical Preferences
 - **Favicon Paths:** The hero/loading favicon is `Media/Favicon.png`; the browser tab uses `Media/Favicon_Tab.png`.
